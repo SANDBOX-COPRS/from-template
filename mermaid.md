@@ -2,10 +2,10 @@
 sequenceDiagram
     catalog event->>filter: New data
     Note right of filter: Discard S1 & S3 data
-    filter->>PW S2 LOU: Auxiliary files <br/>or S2 session
+    filter->>PW S2 L0U: Auxiliary files <br/>or S2 session
     PW S2 L0U->>MongoDB: Create a job or <br/>add inputs to existing job
-    PW S2 LOU->>Metadata Search Controller: Request good AUX
-    Metadata Search Controller->>PW S2 LOU: Send list of good AUX
+    PW S2 L0U->>Metadata Search Controller: Request good AUX
+    Metadata Search Controller->>PW S2 L0U: Send list of good AUX
     PW S2 L0U->>MongoDB: Create a job or <br/>update existing job
     loop JobReady
         PW S2 L0U->>PW S2 L0U: Check that all inputs <br/>are available
