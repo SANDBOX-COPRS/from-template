@@ -13,5 +13,6 @@ sequenceDiagram
 
 
 ```sequence {theme="hand"}
-toto:titi: hello
+toto->titi: titi
+titi-->toto: hiii
 ```
